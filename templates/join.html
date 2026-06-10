@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Join Tournament</title>
+</head>
+<body>
+
+<h1>Join {{ tournament.title }}</h1>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <input type="text" name="player_name" placeholder="Player Name" required>
+    <br><br>
+
+    <input type="text" name="freefire_uid" placeholder="Free Fire UID" required>
+    <br><br>
+
+    <input type="text" name="phone_number" placeholder="BKash/Nagad Number" required>
+    <br><br>
+
+    <input type="text" name="payment_number" placeholder="Payment Number" required>
+    <br><br>
+
+    <input type="text" name="transaction_id" placeholder="Transaction ID" required>
+    <br><br>
+
+    <button type="submit">Join Tournament</button>
+</form>
+
+</body>
+</html>

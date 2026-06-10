@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elite FF Tournament Bangladesh</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#0b0f19;
+color:white;
+}
+
+.navbar{
+background:#111827;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+color:#ff7b00;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:bold;
+}
+
+.menu a:hover{
+color:#ff7b00;
+}
+
+.hero{
+height:60vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+url("https://images.unsplash.com/photo-1542751371-adc38448a05e");
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+font-size:60px;
+color:#ff7b00;
+}
+
+.hero p{
+font-size:20px;
+margin-top:10px;
+}
+
+.section-title{
+text-align:center;
+margin:50px 0 30px;
+font-size:40px;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+padding:20px;
+}
+
+.card{
+background:#161b22;
+width:300px;
+padding:25px;
+border-radius:15px;
+text-align:center;
+}
+
+.card h2{
+margin-bottom:20px;
+color:#ff7b00;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+background:#ff7b00;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
+
+.btn:hover{
+background:#ff9500;
+}
+
+.footer{
+background:#111827;
+padding:30px;
+text-align:center;
+margin-top:50px;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo">ELITE FF</div>
+
+    <div class="menu">
+        <a href="/">Home</a>
+        <a href="/add-money/">💰 Add Money</a>   <!-- ✅ NEW ADDED -->
+        <a href="/admin/">Admin</a>
+    </div>
+</div>
+
+<div class="hero">
+    <h1>🔥 ELITE FF TOURNAMENT 🔥</h1>
+    <p>Bangladesh Premium Free Fire Esports Platform</p>
+</div>
+
+<h1 class="section-title">🔥 Live Tournaments</h1>
+
+<div class="cards">
+
+{% for tournament in tournaments %}
+
+<div class="card">
+
+    <h2>{{ tournament.title }}</h2>
+
+    <a href="/join/{{ tournament.id }}/" class="btn">
+        Join Tournament
+    </a>
+
+</div>
+
+{% empty %}
+
+<div class="card">
+    <h2>No Tournament Available</h2>
+    <p>Admin has not added any tournament yet.</p>
+</div>
+
+{% endfor %}
+
+</div>
+
+<div class="footer">
+    <h2>Elite FF Tournament Bangladesh</h2>
+    <br>
+    <p>© 2026 All Rights Reserved</p>
+</div>
+
+</body>
+</html>

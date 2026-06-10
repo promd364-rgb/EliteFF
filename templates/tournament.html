@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournaments | Elite FF</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background: #0b0f19;
+            color: white;
+        }
+        .navbar {
+            background: #111827;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            color: #ff7b00;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+        .menu a:hover {
+            color: #ff7b00;
+        }
+        .container {
+            padding: 40px 8%;
+            text-align: center;
+        }
+        h1 {
+            color: #ff7b00;
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+        .tournament-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .t-card {
+            background: #161b22;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: left;
+            border: 1px solid #30363d;
+            transition: 0.3s;
+        }
+        .t-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(255, 123, 0, 0.3);
+        }
+        .t-card h3 {
+            color: #ff7b00;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .t-card p {
+            margin: 8px 0;
+            color: #e5e7eb;
+        }
+        .t-card span {
+            color: #ff7b00;
+            font-weight: bold;
+        }
+        .join-btn {
+            display: block;
+            text-align: center;
+            background: #ff7b00;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        .join-btn:hover {
+            background: #ff9500;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo">ELITE FF</div>
+    <div class="menu">
+        <a href="/">Home</a>
+        <a href="/tournament/">Tournament</a>
+        <a href="/login/">Login</a>
+    </div>
+</div>
+
+<div class="container">
+    <h1>🏆 AVAILABLE TOURNAMENTS 🏆</h1>
+    
+    <div class="tournament-list">
+        <!-- Card 1 -->
+        <div class="t-card">
+            <h3>🔥 WEEKLY SOLO SHOWDOWN</h3>
+            <p>Type: <span>SOLO</span></p>
+            <p>Entry Fee: <span>20 TK</span></p>
+            <p>Total Prize Pool: <span>300 TK</span></p>
+            <p>Per Kill: <span>5 TK</span></p>
+            <p>Time: <span>Today 09:00 PM</span></p>
+            <a href="#" class="join-btn">Register Now</a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="t-card">
+            <h3>💥 DUO BATTLEGROUNDS</h3>
+            <p>Type: <span>DUO</span></p>
+            <p>Entry Fee: <span>30 TK</span></p>
+            <p>Total Prize Pool: <span>500 TK</span></p>
+            <p>Per Kill: <span>8 TK</span></p>
+            <p>Time: <span>Tomorrow 08:30 PM</span></p>
+            <a href="#" class="join-btn">Register Now</a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="t-card">
+            <h3>👑 SQUAD ULTIMATE CHAMPIONS</h3>
+            <p>Type: <span>SQUAD</span></p>
+            <p>Entry Fee: <span>50 TK</span></p>
+            <p>Total Prize Pool: <span>1000 TK</span></p>
+            <p>Per Kill: <span>10 TK</span></p>
+            <p>Time: <span>Friday 04:00 PM</span></p>
+            <a href="#" class="join-btn">Register Now</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Money</title>
+
+    <style>
+        body{
+            background:#0b0f19;
+            color:white;
+            font-family:Arial;
+            text-align:center;
+            padding:40px;
+        }
+
+        .box{
+            max-width:600px;
+            margin:auto;
+            background:#161b22;
+            padding:25px;
+            border-radius:12px;
+        }
+
+        .number{
+            font-size:30px;
+            color:#00ff99;
+            font-weight:bold;
+            margin:20px 0;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:20px;
+            padding:10px 20px;
+            background:#ff7b00;
+            color:white;
+            text-decoration:none;
+            border-radius:8px;
+            cursor:pointer;
+        }
+
+        .copy-btn{
+            margin-top:10px;
+            padding:10px 15px;
+            background:#1f2937;
+            border:1px solid #444;
+            color:white;
+            border-radius:8px;
+            cursor:pointer;
+        }
+
+        .copy-btn:hover{
+            background:#374151;
+        }
+
+        .success{
+            color:#00ff99;
+            margin-top:10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+
+    <h1>💰 Add Money</h1>
+
+    <p>
+        টুর্নামেন্টে অংশ নিতে নিচের নাম্বারে টাকা পাঠান।
+    </p>
+
+    <!-- NUMBER -->
+    <div class="number" id="number">
+        01826100818
+    </div>
+
+    <!-- COPY BUTTON -->
+    <button class="copy-btn" onclick="copyNumber()">
+        📋 Copy Number
+    </button>
+
+    <div id="msg" class="success"></div>
+
+    <h3>📌 টাকা পাঠানোর নিয়ম</h3>
+
+    <p style="text-align:left">
+        1️⃣ bKash/Nagad app খুলুন<br><br>
+        2️⃣ Send Money করুন<br><br>
+        3️⃣ এই নাম্বারটি কপি করে দিন<br><br>
+        4️⃣ নির্দিষ্ট টাকা পাঠান<br><br>
+        5️⃣ Transaction ID কপি করুন<br><br>
+        6️⃣ Join form এ দিন<br><br>
+        7️⃣ Admin approve করবে
+    </p>
+
+    <a class="btn" href="/">⬅ Back Home</a>
+
+</div>
+
+<script>
+function copyNumber() {
+    var number = document.getElementById("number").innerText;
+
+    navigator.clipboard.writeText(number).then(function() {
+        document.getElementById("msg").innerText = "✅ Number Copied Successfully!";
+    });
+}
+</script>
+
+</body>
+</html>
